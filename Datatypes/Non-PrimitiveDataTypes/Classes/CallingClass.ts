@@ -2,6 +2,20 @@
 
 import { Item } from "./Baseclass";
 
-var item1 = new Item("Book", 10);
-console.log(item1.name); // Output: Book
-console.log(item1.price); // Output: 10
+
+class Store extends Item {
+
+    MPR: number;
+
+    constructor(name: string, price: number, MPR: number) {
+        super(name, price);
+        this.MPR = MPR;
+    }
+
+    displayDetails(): void {
+        console.log(`Item: ${this.name}, Price: ${this.price}, MPR: ${this.MPR}`);
+    }
+}
+
+let storeItem = new Store("Laptop", 1000, 1200);
+storeItem.displayDetails();

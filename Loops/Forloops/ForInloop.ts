@@ -11,3 +11,11 @@
 for (let key in user) {
   console.log(key);
 }
+
+
+//Iterating using the 'for...in' loop (indexes)
+let employees: Array<number> = [101, 102, 103, 104]; // Only numbers allowed
+
+for (let index in employees) {
+    console.log(employees[index]); // `index` represents array indices
+}
